@@ -1,0 +1,11 @@
+int removeDuplicates(int* arr, int n) {
+    int i = 0;
+    int j = 0;
+    for (j = 0; j < n; j++) {
+        if (arr[i] != arr[j]) {
+            i++;
+            arr[i] = arr[j];
+        }
+    }
+    return i+1;
+}
