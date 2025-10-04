@@ -1,6 +1,6 @@
 int maxSubArray(int* nums, int numsSize) {
     int currSum=0;
-    int maxSum=INT_MIN;
+    int maxSum=nums[0];
     for(int i=0; i<numsSize; i++){
         currSum+=nums[i];
         if(currSum>maxSum){
