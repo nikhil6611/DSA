@@ -2,8 +2,9 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         int ans = 0;
-        for(int i=0;i<nums.size();i++){
-            ans = ans^nums[i];
+        //using for-each loop
+        for(int value : nums){
+            ans=ans^value;
         }
         return ans;
     }
