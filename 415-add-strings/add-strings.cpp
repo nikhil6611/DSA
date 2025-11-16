@@ -8,7 +8,7 @@ public:
              sum= (num1[index1]-'0')+(num2[index2]-'0')+carry;
              carry = sum/10;
              char c = sum%10+'0';
-             ans+=c;
+             ans=c+ans;
              index1--;
              index2--;
          }
@@ -16,13 +16,14 @@ public:
             sum = (num1[index1]-'0')+carry;
             carry = sum/10;
             char c = sum%10+'0';
-            ans+=c;
+            ans= c+ans;
             index1--;
          }
          if(carry){
-           ans+=(carry+'0');
+            char c = carry+'0';
+           ans=c+ans;
          }
-         reverse(ans.begin(), ans.end());
+         //reverse(ans.begin(), ans.end());
          return ans;
 
     }
